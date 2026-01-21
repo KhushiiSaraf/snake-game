@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link href="/src/output.css" rel="stylesheet">
+
+</head>
+
+<body class="h-screen w-full m-0 p-0 box-border bg-neutral-800 text-white">
+
+    <!--Start Game-->
+    <div class="start  absolute h-full w-full backdrop-blur-md ">
+        <div class="start-box flex flex-col justify-center items-center w-full h-full  gap-8">
+            <h2 class="text-4xl">Welcome to the Snake Game!</h2>
+            <button id="start-btn"
+                class="text-2xl bg-white text-black border rounded-4xl p-3 hover:text-3xl">Start</button>
+        </div>
+    </div>
+    <!--ReStart Game-->
+    <div class="restart  absolute h-full w-full backdrop-blur-md hidden">
+        <div class="restart-box flex flex-col justify-center items-center w-full h-full  gap-8">
+            <h2 class="text-4xl">Game Over!</h2>
+            <button id="restart-btn"
+                class="text-2xl bg-white text-black border rounded-4xl p-3 hover:text-3xl">Restart</button>
+        </div>
+    </div>
+
+    <section class="flex flex-col h-full w-full p-9">
+
+        <!-- info block -->
+        <div id="inofs" class="w-full p-5 flex justify-between border-1 border-gray-400 rounded-md ">
+            <div class="info flex justify-between gap-4">
+                <h3>High Score:</h3>
+                <span id="highScore">0</span>
+            </div>
+            <div class="info flex justify-between gap-4">
+                <h3>Score:</h3>
+                <span id="score">0</span>
+            </div>
+            <div class="info flex justify-between gap-4 ">
+                <h3>Timer:</h3>
+                <span id="timer">00:00</span>
+            </div>
+        </div>
+        <!-- board block -->
+        <div
+            class="board h-full w-full border-1 border-gray-400 rounded-md grid [grid-template-rows:repeat(auto-fill,minmax(32px,1fr))] [grid-template-columns:repeat(auto-fill,minmax(32px,1fr))] grow ">
+
+        </div>
+    </section>
+
+
+    <script src="/practice/script.js"></script>
+</body>
+
+</html>
